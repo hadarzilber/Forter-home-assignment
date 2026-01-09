@@ -1,0 +1,1 @@
+{"version":3,"file":"vendorManager.d.ts","sourceRoot":"","sources":["../../../src/server/modules/vendors/vendorManager.ts"],"names":[],"mappings":"AAMA,qBAAa,aAAa;IACZ,OAAO,CAAC,OAAO;gBAAP,OAAO,KAAA;IAErB,UAAU,CAAC,EAAE,EAAE,MAAM,GAAG,OAAO,CAAC,MAAM,CAAC;CAmB9C"}

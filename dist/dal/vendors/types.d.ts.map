@@ -1,0 +1,1 @@
+{"version":3,"file":"types.d.ts","sourceRoot":"","sources":["../../../src/server/dal/vendors/types.ts"],"names":[],"mappings":"AAAA,MAAM,WAAW,UAAU;IACzB,YAAY,EAAE,MAAM,CAAC;CACtB;AAED,MAAM,MAAM,iBAAiB,GAAG;IAC9B,GAAG,CAAC,EAAE,MAAM,CAAC;IACb,MAAM,CAAC,EAAE,MAAM,CAAC,MAAM,EAAE,GAAG,CAAC,CAAC;CAC9B,CAAC"}
