@@ -1,3 +1,4 @@
+import { PORT } from "./tools/config";
 import express, { Express, Request, Response, NextFunction } from "express";
 import cors from "cors";
 import helmet from "helmet";
@@ -24,9 +25,7 @@ export default class BasicServer {
     this.app.use(cors());
     this.app.use(express.json());
     this.app.use(express.urlencoded({ extended: true }));
-
-    // hadar magic numbers
-    this.app.set("port", process.env.PORT || 3000);
+    this.app.set("port", PORT);
   }
 
   private setupRoutes() {
