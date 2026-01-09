@@ -1,8 +1,13 @@
-import { Request, Response, NextFunction } from "express";
+import { NextFunction, Request, Response } from "express";
+import { AppError } from "../errors/customErrors";
 import { logger } from "../tools/logger";
-import { AppError } from "../errors/AppError";
 
-export const errorHandler = (err: unknown, req: Request, res: Response) => {
+export const errorHandler = (
+  err: unknown,
+  req: Request,
+  res: Response,
+  next: NextFunction
+) => {
   if (err instanceof AppError) {
     logger.warn("AppError", {
       message: err.message,

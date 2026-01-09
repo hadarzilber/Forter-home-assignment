@@ -1,0 +1,1 @@
+{"version":3,"file":"index.d.ts","sourceRoot":"","sources":["../../../../src/server/dal/vendors/ipinfo/index.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,YAAY,EAAE,MAAM,iBAAiB,CAAC;AAE/C,qBAAa,YAAa,SAAQ,YAAY;IAC5C,IAAI,SAAY;IAChB,OAAO,SAAuB;IAC9B,cAAc,SAAa;IAC3B,qBAAqB,UAAQ;IAEvB,oBAAoB,CAAC,EAAE,EAAE,MAAM,GAAG,OAAO,CAAC,MAAM,CAAC;CAKxD"}

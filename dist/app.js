@@ -12,9 +12,10 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-const redis_1 = require("./tools/cache/redis");
+require("dotenv").config();
 const BasicServer_1 = __importDefault(require("./BasicServer"));
 const routes_1 = require("./routes");
+const redis_1 = require("./tools/cache/redis");
 function initializeIpToCountryServer() {
     return __awaiter(this, void 0, void 0, function* () {
         (0, redis_1.initRedis)();
@@ -27,4 +28,4 @@ function initializeIpToCountryServer() {
     });
 }
 initializeIpToCountryServer();
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiYXBwLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiLi4vc3JjL3NlcnZlci9hcHAudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7QUFBQSwrQ0FBZ0Q7QUFDaEQsZ0VBQXdDO0FBQ3hDLHFDQUFvQztBQUVwQyxTQUFlLDJCQUEyQjs7UUFDeEMsSUFBQSxpQkFBUyxHQUFFLENBQUM7UUFFWixNQUFNLE1BQU0sR0FBRyxJQUFJLHFCQUFXLEVBQUUsQ0FBQztRQUNqQyxNQUFNLEdBQUcsR0FBRyxNQUFNLENBQUMsY0FBYyxFQUFFLENBQUM7UUFFcEMsSUFBQSxpQkFBUSxFQUFDLEdBQUcsQ0FBQyxDQUFDO1FBRWQsR0FBRyxDQUFDLE1BQU0sQ0FBQyxHQUFHLENBQUMsR0FBRyxDQUFDLE1BQU0sQ0FBQyxFQUFFLEdBQUcsRUFBRTtZQUMvQixPQUFPLENBQUMsR0FBRyxDQUFDLDBCQUEwQixHQUFHLENBQUMsR0FBRyxDQUFDLE1BQU0sQ0FBQyxFQUFFLENBQUMsQ0FBQztRQUMzRCxDQUFDLENBQUMsQ0FBQztJQUNMLENBQUM7Q0FBQTtBQUVELDJCQUEyQixFQUFFLENBQUMifQ==
+//# sourceMappingURL=app.js.map

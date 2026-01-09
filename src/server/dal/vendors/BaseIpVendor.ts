@@ -1,11 +1,18 @@
 import { fetchData } from "../../tools/axios";
-import { GetCountryOptions, IpResponse } from "./types";
+import { getCountryNameFromCode } from "../../tools/countryCodes";
+import { GetCountryFromVendorOptions, IpResponse } from "./types";
 
 export abstract class BaseIpVendor {
   abstract name: string;
   abstract baseUrl: string;
+  abstract countryKeyName: string;
 
-  async getCountry(ip: string, options?: GetCountryOptions): Promise<string> {
+  isCountryCodeReturned: boolean = false;
+
+  async getCountryFromVendor(
+    ip: string,
+    options?: GetCountryFromVendorOptions
+  ): Promise<string> {
     const url = options?.url ?? `${this.baseUrl}/${ip}`;
 
     const data = await fetchData<IpResponse>(url, {
@@ -16,9 +23,16 @@ export abstract class BaseIpVendor {
   }
 
   private assertCountryName(data: IpResponse): string {
-    if (!data?.country_name) {
+    if (!data?.[this.countryKeyName]) {
       throw new Error(`Invalid response from ${this.name}`);
     }
-    return data.country_name;
+
+    const countryValue = data[this.countryKeyName];
+
+    if (this.isCountryCodeReturned) {
+      return getCountryNameFromCode(countryValue) || countryValue;
+    }
+
+    return countryValue;
   }
 }

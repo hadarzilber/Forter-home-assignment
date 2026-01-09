@@ -1,5 +1,5 @@
 import { cache } from "../../../tools/cache";
-import { VENDOR_LIMITS, RATE_LIMIT_CACHE_TTL_SECONDS } from "./config";
+import { RATE_LIMIT_CACHE_TTL_SECONDS, VENDOR_LIMITS } from "./config";
 
 function currentHour(): string {
   const now = new Date();

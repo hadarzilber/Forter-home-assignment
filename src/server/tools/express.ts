@@ -1,4 +1,4 @@
-import { NextFunction, Response, Request } from "express";
+import { NextFunction, Request, Response } from "express";
 
 export const handleSuccess = (
   response: Response,
@@ -12,7 +12,6 @@ export const handleSuccess = (
   });
 };
 
-// hadar return different errors for validations vs rate limit
 export const apiFuncWrapper =
   (func: (req: Request, res: Response) => Promise<any>) =>
   async (req: Request, res: Response, next: NextFunction) => {

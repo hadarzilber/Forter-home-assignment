@@ -10,12 +10,14 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.getCountryForIp = void 0;
-const ipapi_1 = require("../../dal/vendors/ipapi");
-const ipstack_1 = require("../../dal/vendors/ipstack");
 const cache_1 = require("../../tools/cache");
-const vendorManager_1 = require("../vendors/vendorManager");
+const ip_1 = require("../../tools/ip");
+const vendorFactory_1 = require("../vendors/vendorFactory");
 const config_1 = require("./config");
 const getCountryForIp = (ip) => __awaiter(void 0, void 0, void 0, function* () {
+    if ((0, ip_1.isPrivateIp)(ip)) {
+        return "private IP!";
+    }
     const cacheKey = `${config_1.IP_COUNTRY_CACHE_PREFIX}:${ip}`;
     const cachedCountry = yield cache_1.cache.get(cacheKey);
     if (cachedCountry) {
@@ -27,13 +29,8 @@ const getCountryForIp = (ip) => __awaiter(void 0, void 0, void 0, function* () {
 });
 exports.getCountryForIp = getCountryForIp;
 const getCountry = (ip) => __awaiter(void 0, void 0, void 0, function* () {
-    // hadar should you add more abstraction so that when adding more vendors you don't need to touch this file?
-    const vendorManager = new vendorManager_1.VendorManager([
-        new ipstack_1.IpstackVendor(),
-        new ipapi_1.IpApiVendor(),
-    ]);
+    const vendorManager = (0, vendorFactory_1.getVendorManager)();
     const country = yield vendorManager.getCountry(ip);
     return country;
 });
-// hadar add not naive cache?
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiaW5kZXguanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyIuLi8uLi8uLi9zcmMvc2VydmVyL21vZHVsZXMvaXBDb3VudHJ5L2luZGV4LnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7OztBQUFBLG1EQUFzRDtBQUN0RCx1REFBMEQ7QUFDMUQsNkNBQTBDO0FBQzFDLDREQUF5RDtBQUN6RCxxQ0FHa0I7QUFFWCxNQUFNLGVBQWUsR0FBRyxDQUFPLEVBQVUsRUFBbUIsRUFBRTtJQUNuRSxNQUFNLFFBQVEsR0FBRyxHQUFHLGdDQUF1QixJQUFJLEVBQUUsRUFBRSxDQUFDO0lBRXBELE1BQU0sYUFBYSxHQUFHLE1BQU0sYUFBSyxDQUFDLEdBQUcsQ0FBUyxRQUFRLENBQUMsQ0FBQztJQUV4RCxJQUFJLGFBQWEsRUFBRSxDQUFDO1FBQ2xCLE9BQU8sYUFBYSxDQUFDO0lBQ3ZCLENBQUM7SUFFRCxNQUFNLE9BQU8sR0FBRyxNQUFNLFVBQVUsQ0FBQyxFQUFFLENBQUMsQ0FBQztJQUNyQyxNQUFNLGFBQUssQ0FBQyxHQUFHLENBQUMsUUFBUSxFQUFFLE9BQU8sRUFBRSxxQ0FBNEIsQ0FBQyxDQUFDO0lBRWpFLE9BQU8sT0FBTyxDQUFDO0FBQ2pCLENBQUMsQ0FBQSxDQUFDO0FBYlcsUUFBQSxlQUFlLG1CQWExQjtBQUVGLE1BQU0sVUFBVSxHQUFHLENBQU8sRUFBVSxFQUFtQixFQUFFO0lBQ3ZELDRHQUE0RztJQUM1RyxNQUFNLGFBQWEsR0FBRyxJQUFJLDZCQUFhLENBQUM7UUFDdEMsSUFBSSx1QkFBYSxFQUFFO1FBQ25CLElBQUksbUJBQVcsRUFBRTtLQUNsQixDQUFDLENBQUM7SUFFSCxNQUFNLE9BQU8sR0FBRyxNQUFNLGFBQWEsQ0FBQyxVQUFVLENBQUMsRUFBRSxDQUFDLENBQUM7SUFDbkQsT0FBTyxPQUFPLENBQUM7QUFDakIsQ0FBQyxDQUFBLENBQUM7QUFFRiw2QkFBNkIifQ==
+//# sourceMappingURL=index.js.map

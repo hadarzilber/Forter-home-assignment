@@ -1,10 +1,10 @@
-import { PORT } from "./tools/config";
-import express, { Express, Request, Response, NextFunction } from "express";
 import cors from "cors";
+import express, { Express, Request, Response } from "express";
 import helmet from "helmet";
 import { errorHandler } from "./middlewares/errorHandler";
 import { notFoundHandler } from "./middlewares/notFoundHandler";
 import { initApis } from "./routes";
+import { PORT } from "./tools/config";
 
 export default class BasicServer {
   private app: Express;
@@ -36,7 +36,7 @@ export default class BasicServer {
   }
 
   private setupErrorHandling() {
-    this.app.use(notFoundHandler);
     this.app.use(errorHandler);
+    this.app.use(notFoundHandler);
   }
 }

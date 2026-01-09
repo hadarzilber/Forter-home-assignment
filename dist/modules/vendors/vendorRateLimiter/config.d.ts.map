@@ -1,1 +1,1 @@
-{"version":3,"file":"config.d.ts","sourceRoot":"","sources":["../../../../src/server/modules/vendors/vendorRateLimiter/config.ts"],"names":[],"mappings":"AAAA,eAAO,MAAM,aAAa;;;CAGzB,CAAC;AAEF,eAAO,MAAM,4BAA4B,OAAO,CAAC"}
+{"version":3,"file":"config.d.ts","sourceRoot":"","sources":["../../../../src/server/modules/vendors/vendorRateLimiter/config.ts"],"names":[],"mappings":"AAAA,eAAO,MAAM,aAAa;;;;CAIzB,CAAC;AAEF,eAAO,MAAM,4BAA4B,OAAO,CAAC"}

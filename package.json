@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "tsc && node dist/app.js",
+    "start": "NODE_ENV=production && tsc && node dist/app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "hadar-zilber",
@@ -12,9 +12,12 @@
   "dependencies": {
     "axios": "^1.13.2",
     "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
     "express": "^5.2.1",
     "helmet": "^8.1.0",
+    "i18n-iso-countries": "^7.14.0",
     "ioredis": "^5.9.1",
+    "ipaddr.js": "^2.3.0",
     "redis": "^5.10.0",
     "zod": "^4.3.5"
   },

@@ -1,5 +1,5 @@
 import { getRedis } from "./redis";
-import { redisConfig } from "../../config/redis";
+import { redisConfig } from "./config";
 
 export const cache = {
   async get<T>(key: string): Promise<T | null> {

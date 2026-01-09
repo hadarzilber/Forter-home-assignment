@@ -18,9 +18,8 @@ const handleSuccess = (response, text, content) => {
     });
 };
 exports.handleSuccess = handleSuccess;
-// hadar return different errors for validations vs rate limit
 const apiFuncWrapper = (func) => (req, res, next) => __awaiter(void 0, void 0, void 0, function* () {
     func(req, res).catch(next);
 });
 exports.apiFuncWrapper = apiFuncWrapper;
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiZXhwcmVzcy5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIi4uLy4uL3NyYy9zZXJ2ZXIvdG9vbHMvZXhwcmVzcy50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7QUFFTyxNQUFNLGFBQWEsR0FBRyxDQUMzQixRQUFrQixFQUNsQixJQUFZLEVBQ1osT0FBYSxFQUNiLEVBQUU7SUFDRixRQUFRLENBQUMsSUFBSSxDQUFDO1FBQ1osS0FBSyxFQUFFLElBQUk7UUFDWCxJQUFJO1FBQ0osT0FBTztLQUNSLENBQUMsQ0FBQztBQUNMLENBQUMsQ0FBQztBQVZXLFFBQUEsYUFBYSxpQkFVeEI7QUFFRiw4REFBOEQ7QUFDdkQsTUFBTSxjQUFjLEdBQ3pCLENBQUMsSUFBbUQsRUFBRSxFQUFFLENBQ3hELENBQU8sR0FBWSxFQUFFLEdBQWEsRUFBRSxJQUFrQixFQUFFLEVBQUU7SUFDeEQsSUFBSSxDQUFDLEdBQUcsRUFBRSxHQUFHLENBQUMsQ0FBQyxLQUFLLENBQUMsSUFBSSxDQUFDLENBQUM7QUFDN0IsQ0FBQyxDQUFBLENBQUM7QUFKUyxRQUFBLGNBQWMsa0JBSXZCIn0=
+//# sourceMappingURL=express.js.map

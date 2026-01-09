@@ -1,6 +1,7 @@
-import { initRedis } from "./tools/cache/redis";
+require("dotenv").config();
 import BasicServer from "./BasicServer";
 import { initApis } from "./routes";
+import { initRedis } from "./tools/cache/redis";
 
 async function initializeIpToCountryServer() {
   initRedis();

@@ -1,11 +1,12 @@
+import { BaseIpVendor } from "../../dal/vendors/BaseIpVendor";
+import { ServiceUnavailableError } from "../../errors/customErrors";
 import {
   canCallVendor,
   incrementVendorUsage,
 } from "./vendorRateLimiter/vendorRateLimiter";
-import { ServiceUnavailableError } from "../../errors/customErrors";
 
 export class VendorManager {
-  constructor(private vendors) {}
+  constructor(private vendors: BaseIpVendor[]) {}
 
   async getCountry(ip: string): Promise<string> {
     for (const vendor of this.vendors) {
@@ -14,7 +15,7 @@ export class VendorManager {
       }
 
       try {
-        const country = await vendor.getCountry(ip);
+        const country = await vendor.getCountryFromVendor(ip);
         await incrementVendorUsage(vendor.name);
         return country;
       } catch (err) {

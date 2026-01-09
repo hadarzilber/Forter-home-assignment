@@ -1,13 +1,15 @@
-import { IpApiVendor } from "../../dal/vendors/ipapi";
-import { IpstackVendor } from "../../dal/vendors/ipstack";
 import { cache } from "../../tools/cache";
-import { VendorManager } from "../vendors/vendorManager";
+import { isPrivateIp } from "../../tools/ip";
+import { getVendorManager } from "../vendors/vendorFactory";
 import {
   IP_COUNTRY_CACHE_PREFIX,
   IP_COUNTRY_CACHE_TTL_SECONDS,
 } from "./config";
 
 export const getCountryForIp = async (ip: string): Promise<string> => {
+  if (isPrivateIp(ip)) {
+    return "private IP!";
+  }
   const cacheKey = `${IP_COUNTRY_CACHE_PREFIX}:${ip}`;
 
   const cachedCountry = await cache.get<string>(cacheKey);
@@ -23,14 +25,7 @@ export const getCountryForIp = async (ip: string): Promise<string> => {
 };
 
 const getCountry = async (ip: string): Promise<string> => {
-  // hadar should you add more abstraction so that when adding more vendors you don't need to touch this file?
-  const vendorManager = new VendorManager([
-    new IpstackVendor(),
-    new IpApiVendor(),
-  ]);
-
+  const vendorManager = getVendorManager();
   const country = await vendorManager.getCountry(ip);
   return country;
 };
-
-// hadar add not naive cache?
