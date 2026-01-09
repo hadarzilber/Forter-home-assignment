@@ -1,1 +1,0 @@
-{"version":3,"file":"vendorFactory.js","sourceRoot":"","sources":["../../../src/server/modules/vendors/vendorFactory.ts"],"names":[],"mappings":";;;AAAA,mDAAsD;AACtD,qDAAwD;AACxD,uDAA0D;AAC1D,mDAAgD;AAEzC,MAAM,gBAAgB,GAAG,GAAkB,EAAE;IAClD,OAAO,IAAI,6BAAa,CAAC;QACvB,IAAI,qBAAY,EAAE;QAClB,IAAI,uBAAa,EAAE;QACnB,IAAI,mBAAW,EAAE;KAClB,CAAC,CAAC;AACL,CAAC,CAAC;AANW,QAAA,gBAAgB,oBAM3B"}

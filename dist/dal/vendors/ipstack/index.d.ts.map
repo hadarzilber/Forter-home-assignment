@@ -1,1 +1,0 @@
-{"version":3,"file":"index.d.ts","sourceRoot":"","sources":["../../../../src/server/dal/vendors/ipstack/index.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,YAAY,EAAE,MAAM,iBAAiB,CAAC;AAE/C,qBAAa,aAAc,SAAQ,YAAY;IAC7C,IAAI,SAAa;IACjB,OAAO,SAA4B;IACnC,cAAc,SAAkB;IAE1B,oBAAoB,CAAC,EAAE,EAAE,MAAM,GAAG,OAAO,CAAC,MAAM,CAAC;CAKxD"}

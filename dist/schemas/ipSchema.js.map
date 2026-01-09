@@ -1,1 +1,0 @@
-{"version":3,"file":"ipSchema.js","sourceRoot":"","sources":["../../src/server/schemas/ipSchema.ts"],"names":[],"mappings":";;;AAAA,6BAAwB;AAExB,MAAM,qBAAqB,GAAG,OAAC,CAAC,MAAM,CAAC;IACrC,EAAE,EAAE,OAAC,CAAC,KAAK,CAAC,CAAC,OAAC,CAAC,IAAI,EAAE,EAAE,OAAC,CAAC,IAAI,EAAE,CAAC,CAAC;CAClC,CAAC,CAAC;AAEU,QAAA,gBAAgB,GAAG,EAAE,KAAK,EAAE,qBAAqB,EAAE,CAAC"}

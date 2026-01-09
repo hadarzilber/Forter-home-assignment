@@ -1,1 +1,0 @@
-{"version":3,"file":"config.js","sourceRoot":"","sources":["../../../../src/server/modules/vendors/vendorRateLimiter/config.ts"],"names":[],"mappings":";;;AAAa,QAAA,aAAa,GAAG;IAC3B,OAAO,EAAE,CAAC;IACV,KAAK,EAAE,CAAC;IACR,MAAM,EAAE,IAAI;CACb,CAAC;AAEW,QAAA,4BAA4B,GAAG,IAAI,CAAC,CAAC,SAAS"}

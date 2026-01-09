@@ -1,1 +1,0 @@
-{"version":3,"file":"BasicServer.d.ts","sourceRoot":"","sources":["../src/server/BasicServer.ts"],"names":[],"mappings":"AACA,OAAgB,EAAE,OAAO,EAAqB,MAAM,SAAS,CAAC;AAO9D,MAAM,CAAC,OAAO,OAAO,WAAW;IAC9B,OAAO,CAAC,GAAG,CAAU;;IASrB,cAAc,IAAI,OAAO;IAIzB,OAAO,CAAC,gBAAgB;IAQxB,OAAO,CAAC,WAAW;IAOnB,OAAO,CAAC,kBAAkB;CAI3B"}
